@@ -22,3 +22,4 @@ In the terminal, navigate to the project folder and run:
 ```bash
 dotnet build
 ```
+

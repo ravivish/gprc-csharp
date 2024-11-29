@@ -4,7 +4,7 @@ namespace GrpcServer;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
@@ -18,5 +18,7 @@ public class Program
         app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
         app.Run();
+
+        await Task.Delay(-1);  // Keep the server running
     }
 }
